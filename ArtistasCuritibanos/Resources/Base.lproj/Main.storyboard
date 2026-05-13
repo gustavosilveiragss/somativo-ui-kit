@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-vc">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="nav-scene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nav-vc" customClass="MainNavigationController" customModule="ArtistasCuritibanos" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gal-vc" kind="relationship" relationship="rootViewController" id="seg-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="0.0"/>
+        </scene>
+        <!--Galeria View Controller-->
+        <scene sceneID="gal-scene">
+            <objects>
+                <viewController storyboardIdentifier="GaleriaViewController" id="gal-vc" customClass="GaleriaViewController" customModule="ArtistasCuritibanos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gal-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Artistas Curitibanos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-titulo">
+                                <rect key="frame" x="20" y="134" width="353" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Uma seleção de obras que celebram a arte feita na cidade dos pinheirais." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-subtitulo">
+                                <rect key="frame" x="20" y="178.33333333333334" width="353" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  🔎  Buscar por título ou artista" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gal-busca">
+                                <rect key="frame" x="20" y="230" width="353" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gal-cv">
+                                <rect key="frame" x="0.0" y="284" width="393" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="14" id="gal-flow">
+                                    <size key="itemSize" width="160" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="16" maxX="20" maxY="32"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ObraCell" id="gal-cell" customClass="ObraCell" customModule="ArtistasCuritibanos" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="16" width="160" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cell-cv">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cell-img">
+                                                    <rect key="frame" x="0.0" y="1.6666666666666572" width="160" height="197"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cell-overlay">
+                                                    <rect key="frame" x="0.0" y="139" width="160" height="61"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1952" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-ano">
+                                                    <rect key="frame" x="11.999999999999998" y="147" width="22.333333333333329" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" white="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-titulo">
+                                                    <rect key="frame" x="12" y="160" width="136" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-artista">
+                                                    <rect key="frame" x="12" y="178" width="136" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cell-ano" firstAttribute="leading" secondItem="cell-cv" secondAttribute="leading" constant="12" id="ca1"/>
+                                                <constraint firstItem="cell-img" firstAttribute="leading" secondItem="cell-cv" secondAttribute="leading" id="ci1"/>
+                                                <constraint firstItem="cell-img" firstAttribute="top" secondItem="cell-cv" secondAttribute="top" id="ci2"/>
+                                                <constraint firstAttribute="trailing" secondItem="cell-img" secondAttribute="trailing" id="ci3"/>
+                                                <constraint firstAttribute="bottom" secondItem="cell-img" secondAttribute="bottom" id="ci4"/>
+                                                <constraint firstItem="cell-overlay" firstAttribute="leading" secondItem="cell-cv" secondAttribute="leading" id="co1"/>
+                                                <constraint firstAttribute="trailing" secondItem="cell-overlay" secondAttribute="trailing" id="co2"/>
+                                                <constraint firstAttribute="bottom" secondItem="cell-overlay" secondAttribute="bottom" id="co3"/>
+                                                <constraint firstItem="cell-overlay" firstAttribute="top" secondItem="cell-ano" secondAttribute="top" constant="-8" id="co4"/>
+                                                <constraint firstItem="cell-artista" firstAttribute="top" secondItem="cell-titulo" secondAttribute="bottom" constant="2" id="cr1"/>
+                                                <constraint firstItem="cell-artista" firstAttribute="leading" secondItem="cell-cv" secondAttribute="leading" constant="12" id="cr2"/>
+                                                <constraint firstAttribute="trailing" secondItem="cell-artista" secondAttribute="trailing" constant="12" id="cr3"/>
+                                                <constraint firstAttribute="bottom" secondItem="cell-artista" secondAttribute="bottom" constant="10" id="cr4"/>
+                                                <constraint firstItem="cell-titulo" firstAttribute="top" secondItem="cell-ano" secondAttribute="bottom" constant="2" id="ct1"/>
+                                                <constraint firstItem="cell-titulo" firstAttribute="leading" secondItem="cell-cv" secondAttribute="leading" constant="12" id="ct2"/>
+                                                <constraint firstAttribute="trailing" secondItem="cell-titulo" secondAttribute="trailing" constant="12" id="ct3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="anoLabel" destination="cell-ano" id="conn-ano"/>
+                                            <outlet property="artistaLabel" destination="cell-artista" id="conn-artista"/>
+                                            <outlet property="imagemView" destination="cell-img" id="conn-img"/>
+                                            <outlet property="overlay" destination="cell-overlay" id="conn-overlay"/>
+                                            <outlet property="tituloLabel" destination="cell-titulo" id="conn-cell-titulo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gal-safe"/>
+                        <color key="backgroundColor" name="FundoPapel"/>
+                        <constraints>
+                            <constraint firstItem="gal-busca" firstAttribute="top" secondItem="gal-subtitulo" secondAttribute="bottom" constant="18" id="gb1"/>
+                            <constraint firstItem="gal-busca" firstAttribute="leading" secondItem="gal-view" secondAttribute="leading" constant="20" id="gb2"/>
+                            <constraint firstAttribute="trailing" secondItem="gal-busca" secondAttribute="trailing" constant="20" id="gb3"/>
+                            <constraint firstItem="gal-busca" firstAttribute="height" constant="46" id="gb4"/>
+                            <constraint firstItem="gal-cv" firstAttribute="top" secondItem="gal-busca" secondAttribute="bottom" constant="8" id="gc1"/>
+                            <constraint firstItem="gal-cv" firstAttribute="leading" secondItem="gal-view" secondAttribute="leading" id="gc2"/>
+                            <constraint firstAttribute="trailing" secondItem="gal-cv" secondAttribute="trailing" id="gc3"/>
+                            <constraint firstAttribute="bottom" secondItem="gal-cv" secondAttribute="bottom" id="gc4"/>
+                            <constraint firstItem="gal-subtitulo" firstAttribute="top" secondItem="gal-titulo" secondAttribute="bottom" constant="6" id="gs1"/>
+                            <constraint firstItem="gal-subtitulo" firstAttribute="leading" secondItem="gal-view" secondAttribute="leading" constant="20" id="gs2"/>
+                            <constraint firstAttribute="trailing" secondItem="gal-subtitulo" secondAttribute="trailing" constant="20" id="gs3"/>
+                            <constraint firstItem="gal-titulo" firstAttribute="top" secondItem="gal-safe" secondAttribute="top" constant="16" id="gt1"/>
+                            <constraint firstItem="gal-titulo" firstAttribute="leading" secondItem="gal-view" secondAttribute="leading" constant="20" id="gt2"/>
+                            <constraint firstAttribute="trailing" secondItem="gal-titulo" secondAttribute="trailing" constant="20" id="gt3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buscaTextField" destination="gal-busca" id="conn-busca"/>
+                        <outlet property="collectionView" destination="gal-cv" id="conn-cv"/>
+                        <segue destination="det-vc" kind="show" identifier="mostrarDetalhe" id="seg-detalhe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gal-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="0.0"/>
+        </scene>
+        <!--Detalhe Obra View Controller-->
+        <scene sceneID="det-scene">
+            <objects>
+                <viewController storyboardIdentifier="DetalheObraViewController" id="det-vc" customClass="DetalheObraViewController" customModule="ArtistasCuritibanos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="det-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="det-scroll">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-img">
+                                        <rect key="frame" x="20" y="61.666666666666657" width="353" height="261.66666666666663"/>
+                                        <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="det-img" secondAttribute="width" multiplier="0.75" id="di4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Título da Obra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-titulo">
+                                        <rect key="frame" x="20" y="344.66666666666669" width="353" height="33.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nome do Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-artista">
+                                        <rect key="frame" x="20" y="390.33333333333331" width="130.66666666666666" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="det-estilo-cont">
+                                        <rect key="frame" x="19.999999999999996" y="424.33333333333331" width="56.666666666666657" height="26.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Estilo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-estilo">
+                                                <rect key="frame" x="12" y="6.0000000000000009" width="32.666666666666664" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AmbarPinhao"/>
+                                        <constraints>
+                                            <constraint firstItem="det-estilo" firstAttribute="leading" secondItem="det-estilo-cont" secondAttribute="leading" constant="12" id="de1"/>
+                                            <constraint firstAttribute="trailing" secondItem="det-estilo" secondAttribute="trailing" constant="12" id="de2"/>
+                                            <constraint firstItem="det-estilo" firstAttribute="top" secondItem="det-estilo-cont" secondAttribute="top" constant="6" id="de3"/>
+                                            <constraint firstAttribute="bottom" secondItem="det-estilo" secondAttribute="bottom" constant="6" id="de4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-ano">
+                                        <rect key="frame" x="88.666666666666671" y="429.66666666666669" width="24.666666666666671" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Descrição da obra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-descricao">
+                                        <rect key="frame" x="20" y="470.66666666666669" width="353" height="19.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="det-artista" firstAttribute="top" secondItem="det-titulo" secondAttribute="bottom" constant="12" id="da1"/>
+                                    <constraint firstItem="det-artista" firstAttribute="leading" secondItem="det-scroll" secondAttribute="leading" constant="20" id="da2"/>
+                                    <constraint firstItem="det-descricao" firstAttribute="top" secondItem="det-estilo-cont" secondAttribute="bottom" constant="20" id="dd1"/>
+                                    <constraint firstItem="det-descricao" firstAttribute="leading" secondItem="det-scroll" secondAttribute="leading" constant="20" id="dd2"/>
+                                    <constraint firstItem="det-descricao" firstAttribute="width" secondItem="det-scroll" secondAttribute="width" constant="-40" id="dd3"/>
+                                    <constraint firstAttribute="bottom" secondItem="det-descricao" secondAttribute="bottom" constant="40" id="dd4"/>
+                                    <constraint firstItem="det-estilo-cont" firstAttribute="top" secondItem="det-artista" secondAttribute="bottom" constant="12" id="dec1"/>
+                                    <constraint firstItem="det-estilo-cont" firstAttribute="leading" secondItem="det-scroll" secondAttribute="leading" constant="20" id="dec2"/>
+                                    <constraint firstItem="det-img" firstAttribute="top" secondItem="det-scroll" secondAttribute="top" constant="60" id="di1"/>
+                                    <constraint firstItem="det-img" firstAttribute="leading" secondItem="det-scroll" secondAttribute="leading" constant="20" id="di2"/>
+                                    <constraint firstItem="det-img" firstAttribute="width" secondItem="det-scroll" secondAttribute="width" constant="-40" id="di3"/>
+                                    <constraint firstItem="det-ano" firstAttribute="centerY" secondItem="det-estilo-cont" secondAttribute="centerY" id="dn1"/>
+                                    <constraint firstItem="det-ano" firstAttribute="leading" secondItem="det-estilo-cont" secondAttribute="trailing" constant="12" id="dn2"/>
+                                    <constraint firstItem="det-titulo" firstAttribute="top" secondItem="det-img" secondAttribute="bottom" constant="20" id="dt1"/>
+                                    <constraint firstItem="det-titulo" firstAttribute="leading" secondItem="det-scroll" secondAttribute="leading" constant="20" id="dt2"/>
+                                    <constraint firstItem="det-titulo" firstAttribute="width" secondItem="det-scroll" secondAttribute="width" constant="-40" id="dt3"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="det-back">
+                                <rect key="frame" x="16" y="125.99999999999999" width="15.666666666666664" height="22.333333333333329"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="voltarTapped:" destination="det-vc" eventType="touchUpInside" id="act-back"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="det-share">
+                                <rect key="frame" x="352.66666666666669" y="122.33333333333333" width="24.333333333333314" height="29.666666666666671"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="compartilharTapped:" destination="det-vc" eventType="touchUpInside" id="act-share"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="det-safe"/>
+                        <color key="backgroundColor" name="FundoPapel"/>
+                        <constraints>
+                            <constraint firstItem="det-back" firstAttribute="top" secondItem="det-safe" secondAttribute="top" constant="8" id="db1"/>
+                            <constraint firstItem="det-back" firstAttribute="leading" secondItem="det-view" secondAttribute="leading" constant="16" id="db2"/>
+                            <constraint firstItem="det-share" firstAttribute="centerY" secondItem="det-back" secondAttribute="centerY" id="dh1"/>
+                            <constraint firstAttribute="trailing" secondItem="det-share" secondAttribute="trailing" constant="16" id="dh2"/>
+                            <constraint firstItem="det-scroll" firstAttribute="top" secondItem="det-view" secondAttribute="top" id="dv1"/>
+                            <constraint firstItem="det-scroll" firstAttribute="leading" secondItem="det-view" secondAttribute="leading" id="dv2"/>
+                            <constraint firstAttribute="trailing" secondItem="det-scroll" secondAttribute="trailing" id="dv3"/>
+                            <constraint firstAttribute="bottom" secondItem="det-scroll" secondAttribute="bottom" id="dv4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="anoLabel" destination="det-ano" id="conn-det-ano"/>
+                        <outlet property="artistaLabel" destination="det-artista" id="conn-det-artista"/>
+                        <outlet property="descricaoLabel" destination="det-descricao" id="conn-det-desc"/>
+                        <outlet property="estiloContainer" destination="det-estilo-cont" id="conn-det-estilo-cont"/>
+                        <outlet property="estiloLabel" destination="det-estilo" id="conn-det-estilo"/>
+                        <outlet property="imagemView" destination="det-img" id="conn-det-img"/>
+                        <outlet property="tituloLabel" destination="det-titulo" id="conn-det-titulo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="det-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
+        <namedColor name="AmbarPinhao">
+            <color red="0.78431372549019607" green="0.58039215686274515" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FundoPapel">
+            <color red="0.96078431372549022" green="0.94901960784313721" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,82 @@
+[
+  {
+    "titulo": "Tigre Esmagando a Cobra",
+    "artista": "João Turin",
+    "ano": 1944,
+    "estilo": "Escultura em bronze",
+    "imagemNome": "turin-tigre",
+    "descricao": "Escultura animalista de João Turin que recebeu medalha de prata no Salão Nacional de Belas Artes em 1944. Representa a mestria do escultor curitibano em retratar felinos, inspirado pelas observações que fazia dos animais no Passeio Público de Curitiba."
+  },
+  {
+    "titulo": "Exílio",
+    "artista": "João Turin",
+    "ano": 1910,
+    "estilo": "Escultura em bronze",
+    "imagemNome": "turin-exilio",
+    "descricao": "Obra realizada por Turin durante seus estudos na Real Academia de Belas Artes de Bruxelas. Representa figura masculina nua em pose contemplativa - exemplo da formação clássica europeia que o escultor trouxe para o Paraná."
+  },
+  {
+    "titulo": "Estátua de Dante Alighieri",
+    "artista": "João Turin",
+    "ano": 1925,
+    "estilo": "Escultura em bronze",
+    "imagemNome": "turin-dante",
+    "descricao": "Tributo escultórico ao poeta italiano autor da Divina Comédia. Localizada em Curitiba, a obra é exemplo do trabalho figurativo de Turin com personagens históricos e literários."
+  },
+  {
+    "titulo": "Pinheiros, Café e Erva-Mate",
+    "artista": "Poty Lazzarotto",
+    "ano": 1959,
+    "estilo": "Painel em madeira",
+    "imagemNome": "poty-pinheiros",
+    "descricao": "Painel em madeira gravada que retrata os três principais elementos econômicos e simbólicos do Paraná. Obra emblemática do paranismo de Poty Lazzarotto, hoje tombada pelo patrimônio histórico estadual."
+  },
+  {
+    "titulo": "Largo da Ordem",
+    "artista": "Poty Lazzarotto",
+    "ano": 1993,
+    "estilo": "Mural em azulejos",
+    "imagemNome": "poty-largo-ordem",
+    "descricao": "Mural em azulejos representando o Largo da Ordem, centro histórico de Curitiba. Uma das obras públicas mais reconhecidas de Poty, integrando-se à paisagem urbana do bairro São Francisco."
+  },
+  {
+    "titulo": "Casario",
+    "artista": "Guido Viaro",
+    "ano": 1960,
+    "estilo": "Óleo sobre tela",
+    "imagemNome": "viaro-casario",
+    "descricao": "Cena de casario urbano característica da fase madura de Guido Viaro. O pintor ítalo-brasileiro foi mestre do modernismo paranaense e introduziu a pintura moderna no Paraná, rompendo com a pintura acadêmica."
+  },
+  {
+    "titulo": "Passeio Público",
+    "artista": "Guido Viaro",
+    "ano": 1936,
+    "estilo": "Óleo sobre tela",
+    "imagemNome": "viaro-passeio",
+    "descricao": "Retrato do Passeio Público de Curitiba, primeiro parque da cidade. Viaro registrou cenas urbanas curitibanas no início do século XX e foi professor de gerações de artistas paranaenses."
+  },
+  {
+    "titulo": "Árvore Amarela",
+    "artista": "Miguel Bakun",
+    "ano": 1956,
+    "estilo": "Óleo sobre tela",
+    "imagemNome": "bakun-arvore",
+    "descricao": "Uma das obras mais significativas de Miguel Bakun, hoje no acervo do Museu Oscar Niemeyer. O pintor de ascendência ucraniana é reconhecido por suas paisagens com empastes densos e cores vibrantes do interior do Paraná."
+  },
+  {
+    "titulo": "Paisagem com Pinheiro",
+    "artista": "Miguel Bakun",
+    "ano": 1951,
+    "estilo": "Óleo sobre tela",
+    "imagemNome": "bakun-pinheiro",
+    "descricao": "Obra premiada no VIII Salão Paranaense de Belas Artes em 1951. Bakun retratou os arredores de Curitiba com pincelada expressiva, capturando a melancolia das matas paranaenses e o pinheiro-do-paraná."
+  },
+  {
+    "titulo": "Composição Abstrata",
+    "artista": "Loio-Pérsio",
+    "ano": 1965,
+    "estilo": "Óleo sobre tela",
+    "imagemNome": "loio-persio-composicao",
+    "descricao": "Obra abstrata de Loio-Pérsio, um dos principais precursores da abstração lírica e informal no Brasil. Estudou pintura em Curitiba com Guido Viaro e fundou o Centro de Gravura do Paraná em 1951."
+  }
+]
